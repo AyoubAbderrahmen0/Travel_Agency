@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/image.png" style="height: 50px; width: 50px;">
+            <span class="text-warning">Alpha</span>Travel
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house me-2" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                </svg>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#destinations"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-airplane me-2" viewBox="0 0 16 16">
+                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                </svg>Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat me-2" viewBox="0 0 16 16">
+                    <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+                  </svg>Services</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tours"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-map me-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
+                </svg>Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill me-2" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>Contact</a>
+                  </li>
+          </div>
+        </div>
+    </nav>
+
+    <!--home-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Discover The Whole World</h5>
+              <p>Enjoy Your Life and Feel Free, Try New Things and See Beautiful Places</p>
+              <p><a href="#" class="btn btn-primary mt-3">Learn More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Your Adventure Begins Here</h5>
+              <p>Follow Your Dream to The End Of the Earth</p>
+              <p><a href="#" class="btn btn-primary mt-3">Learn More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Create Your Travel Story</h5>
+              <p>Find Your Beautiful Place and Get Lost</p>
+              <p><a href="#" class="btn btn-primary mt-3">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!--destinations-->
+    <section id="destinations" class="destinations section-padding">
+        <div class="container">
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/england.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To England</h2>
+                        <p>Discover England's iconic landmarks, charming villages, and vibrant culture with our travel pack. Your unforgettable adventure starts here!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/germany1.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To Germany</h2>
+                        <p>Experience the best of Germany. Visit Berlin's landmarks, enjoy Bavarian culture, and cruise the beautiful Rhine. Don't miss the opportunity to create lasting memories!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/france.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To France</h2>
+                        <p>Explore France with our travel pack. From the Eiffel Tower in Paris to the vineyards of Bordeaux, each destination offers unique charm and culture. Don't miss this chance to experience the best of France!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/us.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To United States</h2>
+                        <p>Discover the United States with our travel pack. From the vibrant streets of New York City to the natural wonders of the Grand Canyon, each destination promises adventure and diversity. Don't miss out on exploring America's rich history, stunning landscapes, and iconic landmarks!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/thailand.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To Thailand</h2>
+                        <p>Explore Thailand with our travel pack. From Bangkok's vibrant streets to Chiang Mai's serene temples and Phuket's beautiful beaches, immerse yourself in Thai culture and hospitality. Don't miss out on the adventure!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/tunisia.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To Tunisia</h2>
+                        <p>Experience Tunisia with our travel pack. Explore ancient Carthage, vibrant Tunisian markets, and the scenic Mediterranean coast. Discover the warmth of Tunisian hospitality and rich cultural heritage. Don't miss out on this unforgettable journey!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="destinations-img">
+                        <img src="images/turkey.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="destinations-text">
+                        <h2>Welcome To Turkey</h2>
+                        <p>Explore Turkey with our travel pack. From Istanbul's bustling streets to the ancient ruins of Ephesus and the stunning landscapes of Cappadocia, experience rich culture, delicious cuisine, and warm hospitality. Don't miss out on Turkey's diverse treasures!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--services-->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Services</h2>
+                        <p>At Alpha Travel, we specialize in crafting unforgettable travel experiences tailored to your desires. From booking flights and accommodations to organizing guided tours and excursions, our dedicated team ensures every detail of your journey is meticulously planned. Whether you’re seeking a serene beach getaway, an adventurous trek, or a cultural immersion, we provide personalized service to make your travel dreams a reality. Trust us to handle the logistics while you focus on creating lasting memories. Discover the world with ease and confidence with Alpha Travel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-subtract"></i>
+                            <h3 class="card-title">Best Quality</h3>
+                            <p class="lead">Experience top-quality service with us, where every trip is seamlessly planned and tailored to your unique needs.</p>
+                            <button class="btn btn-primary text-dark">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-slack"></i>
+                            <h3 class="card-title">Sustainability</h3>
+                            <p class="lead">We prioritize sustainability by offering eco-friendly travel options and supporting local communities.</p>
+                            <button class="btn btn-primary text-dark">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-playstation"></i>
+                            <h3 class="card-title">Intergrity</h3>
+                            <p class="lead">Integrity is at the heart of our services. We ensure transparency and honesty in every aspect of your travel planning.</p>
+                            <button class="btn btn-primary text-dark">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--tours-->
+    <section id="tours" class="tours sectionpadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Tours</h2>
+                        <p>Explore the world with our expertly curated tours. From breathtaking landscapes to cultural immersions, each tour is designed for an unforgettable experience. Join us and discover the extraordinary.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Thailand</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">120£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">8H</span><span class="ms-3">5.0</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">1537</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/2.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Tunisia</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">320£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">10H</span><span class="ms-3">5.0</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">1728</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/3.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Maldives</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">200£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">6H</span><span class="ms-3">4.9</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">3688</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/4.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Hawaii</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">100£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">4H</span><span class="ms-3">4.8</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">1792</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/5.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Indonesia</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">340£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">3H</span><span class="ms-3">4.2</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">786</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="images/6.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">Grece</h3>
+                            <p class="lead"><i class="bi bi-person me-2"></i><span class="me-3">520£</span><i class="bi bi-clock ms-2"></i><span class="ms-2">24H</span><span class="ms-3">5.0</span><i class="bi bi-star-fill text-warning ms-2"></i><span class="ms-3">6109</span><i class="bi bi-heart-fill ms-2 text-danger"></i></p>
+                            <button class="btn bg-primary text-dark">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--team-->
+    <section id="team" class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Meet Our Washington, D.C. Experts</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <img src="images/my.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Ayoub Abderrahmen</h3>
+                        <p class="card-text">Travel Expert</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter mx-1 text-dark"></i>
+                            <i class="bi bi-facebook mx-1 text-dark"></i>
+                            <i class="bi bi-linkedin mx-1 text-dark"></i>
+                            <i class="bi bi-instagram mx-1 text-dark"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <img src="images/oo.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Susae Wraaght</h3>
+                        <p class="card-text">Independent Affiliate</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter mx-1 text-dark"></i>
+                            <i class="bi bi-facebook mx-1 text-dark"></i>
+                            <i class="bi bi-linkedin mx-1 text-dark"></i>
+                            <i class="bi bi-instagram mx-1 text-dark"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <img src="images/ooo.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Birbira Burpulas</h3>
+                        <p class="card-text">Travel Expert</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter mx-1 text-dark"></i>
+                            <i class="bi bi-facebook mx-1 text-dark"></i>
+                            <i class="bi bi-linkedin mx-1 text-dark"></i>
+                            <i class="bi bi-instagram mx-1 text-dark"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <img src="images/oooo.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Lissa Saubas</h3>
+                        <p class="card-text">Travel Expert</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter mx-1 text-dark"></i>
+                            <i class="bi bi-facebook mx-1 text-dark"></i>
+                            <i class="bi bi-linkedin mx-1 text-dark"></i>
+                            <i class="bi bi-instagram mx-1 text-dark"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--contact-->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Contact Us</h2>
+                        <p>Have more questions? We’ll find you the answers. Whether you’re ready to book a trip now or simply want to learn more about what Liberty Travel has to offer, our consultants are available to help.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-12 p-0 py-4">
+                    <form action="#" class="bg-light p-4 m-auto">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" required placeholder="Your Full Name">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" required placeholder="Your Email Here">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea rows="3" class="form-control" required placeholder="Your Query Here"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block mt-3">
+                                Send Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">
+                All Right Reserved <a href="#">@Alpha Travel</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
